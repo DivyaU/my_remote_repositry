@@ -1,0 +1,39 @@
+package com.flp.ems.view;
+
+import java.util.Scanner;
+
+public class BootClass {
+public static void main(String[] args) {
+	int c;
+	System.out.println("1.Add employee\n2.Modiy Employee\n3.Remove Employee\n4.Search Employee\n5.getAllEmployee");
+	Scanner in=new Scanner(System.in);
+	c=in.nextInt();
+	menuSelection(c);
+}
+ static void menuSelection(int c)
+{
+	UserInteraction ui=new UserInteraction();
+	switch(c)
+	{
+	case 1:
+		ui.addEmployee();
+		break;
+	case 2:
+		ui.modifyEmployee();
+		break;
+	case 3:
+		ui.removeEmployee();
+		break;
+	case 4:
+		ui.searchEmployee();
+		break;
+	case 5:
+		ui.getAllEmployee();
+		break;
+		default:
+			break;
+		
+		
+	}
+}
+}
